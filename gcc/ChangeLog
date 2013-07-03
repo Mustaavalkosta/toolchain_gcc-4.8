@@ -1,3 +1,35 @@
+2013-06-30  Terry Guo  <terry.guo@arm.com>
+
+	Backport from mainline
+	2013-03-27  Bin Cheng  <bin.cheng@arm.com>
+
+	PR target/56102
+	* config/arm/arm.c (thumb1_rtx_costs, thumb1_size_rtx_costs): Fix
+	rtx costs for SET/ASHIFT/ASHIFTRT/LSHIFTRT/ROTATERT patterns with
+	mult-word mode.
+
+2013-06-28  Jakub Jelinek  <jakub@redhat.com>
+
+	PR target/57736
+	* config/i386/i386.c (ix86_expand_builtin): If target == NULL
+	and mode is VOIDmode, don't create a VOIDmode pseudo to copy result
+	into.
+
+2013-06-27  Jakub Jelinek  <jakub@redhat.com>
+
+	PR target/57623
+	* config/i386/i386.md (bmi_bextr_<mode>): Swap predicates and
+	constraints of operand 1 and 2.
+
+	PR target/57623
+	* config/i386/i386.md (bmi2_bzhi_<mode>3): Swap AND arguments
+	to match RTL canonicalization.  Swap predicates and
+	constraints of operand 1 and 2.
+
+	* tree-vect-stmts.c (vectorizable_store): Move ptr_incr var
+	decl before the loop, initialize to NULL.
+	(vectorizable_load): Initialize ptr_incr to NULL.
+
 2013-06-24  Martin Jambor  <mjambor@suse.cz>
 
 	PR tree-optimization/57358

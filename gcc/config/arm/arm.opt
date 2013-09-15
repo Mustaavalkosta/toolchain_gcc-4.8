@@ -185,9 +185,17 @@ mthumb-interwork
 Target Report Mask(INTERWORK)
 Support calls between Thumb and ARM instruction sets
 
+minline-thumb1-jumptable
+Target Report Var(inline_thumb1_jump_table)
+Inline Thumb1 Jump table code
+
 mtls-dialect=
 Target RejectNegative Joined Enum(tls_type) Var(target_tls_dialect) Init(TLS_GNU)
 Specify thread local storage scheme
+
+minline-thumb1-jumptable
+Target Report Var(inline_thumb1_jump_table)
+Inline Thumb1 Jump table code
 
 mtp=
 Target RejectNegative Joined Enum(arm_tp_type) Var(target_thread_pointer) Init(TP_AUTO)
